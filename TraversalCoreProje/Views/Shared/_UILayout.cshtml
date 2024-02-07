@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+ <!doctype html>
+<html lang="zxx">
+<!--header-->
+@await Html.PartialAsync("~/Views/LayoutPartial/_HeaderPartial.cshtml")
+@* <partial name="/Views/LayoutPartial/_HeaderPartial.cshtml" /> *@
+<body>
+   
+
+    @await Html.PartialAsync("~/Views/LayoutPartial/_NavbarPartial.cshtml")
+    
+   @*  <partial name="/Views/LayoutPartial/_NavbarPartial.cshtml" /> *@
+
+    @RenderBody();
+    <!--Footer-->
+
+    @await Html.PartialAsync("~/Views/LayoutPartial/_FooterPartial.cshtml") 
+
+  @*   <partial name="/Views/LayoutPartial/_FooterPartial.cshtml" />*@
+
+    <!--scripts-->
+    @await Html.PartialAsync("~/Views/LayoutPartial/_ScriptsPartial.cshtml")
+   @*  <partial name="/Views/LayoutPartial/_ScriptsPartial.cshtml" /> *@
+</body>
+
+</html>
+ 
+    
+
+
+
+
+

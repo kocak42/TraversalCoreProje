@@ -1,0 +1,32 @@
+﻿@using Entity.Concrate
+@model List<Destination>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>Our tour routes</h1>
+<table class="table table_bordered">
+    <tr>
+        <th>#</th>
+        <th>City</th>
+        <th>Day Night</th>
+        <th>Capatiy</th>
+        <th>Price</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.DestinationId</td>
+            <td>@item.City</td>
+            <td>@item.DayNight</td>
+            <td>@item.Capacity</td>
+            <td>@item.Price $</td>
+            <td><a href="#" class="btn btn-outline-info"></a>Detaylar</td>
+            
+        </tr>
+    }
+</table>
+
+
